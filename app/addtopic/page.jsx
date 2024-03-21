@@ -19,7 +19,7 @@ export default function AddTopic() {
             alert("Please provide with title and description to proceed!!")
         }
         try {
-            const res = await fetch("http://localhost:3000/api/topics?_cacheBust=" + Date.now(), {
+            const res = await fetch("/api/topics?_cacheBust=" + Date.now(), {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
