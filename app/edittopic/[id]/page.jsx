@@ -1,11 +1,12 @@
 
 import EditTopicForm from "@/components/EditTopicForm";
-
+const uri = process.env.NEXT_PUBLIC_URI
 const getTopicById = async (id) => {
 
     try {
 
-        const res = await fetch(`https://nextjs-crud-d0adj0jmy-aman-dubeys-projects-e285f962.vercel.app/api/topics/${id}`, { cache: "no-store" })
+        const res = await fetch(uri + `/api/topics/${id}`, { cache: "no-store" })
+
         if (!res.ok) {
             throw new Error("Failed to fetch the topic")
         }
