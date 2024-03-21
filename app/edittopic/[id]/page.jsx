@@ -5,7 +5,7 @@ const getTopicById = async (id) => {
 
     try {
 
-        const res = await fetch(`http://localhost:3000/api/topics/${id}`, { cache: "no-store" })
+        const res = await fetch(`https://nextjs-crud-d0adj0jmy-aman-dubeys-projects-e285f962.vercel.app/api/topics/${id}`, { cache: "no-store" })
         if (!res.ok) {
             throw new Error("Failed to fetch the topic")
         }
