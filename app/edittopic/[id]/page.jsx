@@ -14,7 +14,7 @@ const getTopicById = async (id) => {
         return res.json()
     }
     catch (error) {
-        console.log("Error fetching the data!!");
+        console.log("Error fetching the data!!" + uri );
     }
 }
 
